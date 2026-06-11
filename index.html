@@ -4,45 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte, Futuro Sustentável</title>
-    <!-- Vinculação externa obrigatória do CSS -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>O equilíbrio perfeito entre a produção de alimentos e a preservação do meio ambiente.</p>
-        <button id="btnAcessibilidade">Alternar Modo Escuro</button>
+        <div class="header-container">
+            <h1>Agrinho 2026</h1>
+            <nav>
+                <a href="#introducao">Início</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#interacao">Calculadora</a>
+            </nav>
+            <button id="btn-tema" class="theme-toggle">Alternar Modo</button>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="card-tema">
-            <h2>Participe da Mudança</h2>
-            <p>Descubra como pequenas práticas agrícolas podem salvar nossos recursos naturais.</p>
+    <main>
+        <section id="introducao" class="hero-section">
+            <div class="container">
+                <h2>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
+                <p>O grande desafio do século XXI é alimentar uma população global crescente enquanto preservamos os recursos naturais do nosso planeta. A tecnologia, aliada às práticas sustentáveis, mostra que a produtividade e a conservação ambiental caminham juntas.</p>
+            </div>
         </section>
 
-        <!-- Formulário semântico exigido pelo regulamento -->
-        <form id="meuFormulario">
-            <fieldset>
-                <legend>Simulador de Sustentabilidade</legend>
-                
-                <label for="inputNome">Seu Nome:</label>
-                <input type="text" id="inputNome" placeholder="Digite seu nome completo" required>
+        <section id="pilares" class="features-section">
+            <div class="container grid-3">
+                <div class="card">
+                    <h3>Uso Consciente da Água</h3>
+                    <p>Sistemas de irrigação gota a gota e monitoramento via sensores evitam o desperdício de recursos hídricos nas lavouras.</p>
+                </div>
+                <div class="card">
+                    <h3>Energias Renováveis</h3>
+                    <p>A biomassa e a energia solar transformam propriedades rurais em geradoras de energia limpa e autossustentável.</p>
+                </div>
+                <div class="card">
+                    <h3>Rotação de Culturas</h3>
+                    <p>Práticas que preservam os nutrientes naturais do solo, reduzindo a necessidade de defensivos químicos agressivos.</p>
+                </div>
+            </div>
+        </section>
 
-                <button type="submit" id="meuBotao">Verificar Impacto</button>
-            </fieldset>
-        </form>
+        <section id="interacao" class="interaction-section">
+            <div class="container">
+                <div class="form-box">
+                    <h3>Painel de Diagnóstico Sustentável</h3>
+                    <p>Preencha os dados abaixo para receber um feedback personalizado sobre as práticas agrícolas.</p>
+                    
+                    <form id="formulario-sustentavel" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="nome-usuario">Seu Nome:</label>
+                            <input type="text" id="nome-usuario" required placeholder="Digite seu nome completo">
+                        </div>
 
-        <!-- Div para manipulação dinâmica do DOM via JS -->
-        <div id="mensagemErro" class="mensagem"></div>
+                        <div class="form-group">
+                            <label for="tipo-pratica">Principal Prática Adotada:</label>
+                            <select id="tipo-pratica" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="1">Uso de defensivos químicos sem controle</option>
+                                <option value="2">Plantio direto e rotação de culturas</option>
+                                <option value="3">Agricultura de precisão e reflorestamento</option>
+                            </select>
+                        </div>
+
+                        <button type="button" id="btn-enviar">Analisar Impacto</button>
+                    </form>
+
+                    <div id="resultado-painel" class="hidden-panel">
+                        <h4 id="mensagem-boas-vinda"></h4>
+                        <p id="texto-diagnostico"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Concurso Agrinho. Todos os direitos reservados.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 Concurso Agrinho. Desenvolvido para a categoria Programação.</p>
+            <p>Créditos das informações: SENAR-PR / SEED-PR.</p>
+        </div>
     </footer>
 
-    <!-- Vinculação externa obrigatória do JavaScript no final do body -->
-    <script src="script.js"></script>
+    <script href="script.js" src="script.js"></script>
 </body>
 </html>
-
