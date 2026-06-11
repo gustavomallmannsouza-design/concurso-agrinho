@@ -1,1 +1,136 @@
+/* Variáveis para fácil manutenção e transições visuais */
+:root {
+    --fundo-principal: #eef5f0;
+    --fundo-card: #ffffff;
+    --texto-principal: #2d3a31;
+    --cor-sustentavel: #27ae60;
+    --cor-sustentavel-hover: #1e8449;
+    --borda-padrao: 8px;
+    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Modo escuro manual acionado via JavaScript */
+body.dark-mode {
+    --fundo-principal: #1b241f;
+    --fundo-card: #2c3e35;
+    --texto-principal: #f1f1f1;
+    --cor-sustentavel: #2ecc71;
+    --cor-sustentavel-hover: #27ae60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--cor-sustentavel);
+    margin-bottom: 10px;
+}
+
+.container {
+    background-color: var(--fundo-card);
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: var(--borda-padrao);
+    box-shadow: var(--sombra-card);
+}
+
+fieldset {
+    border: 1px solid var(--cor-sustentavel);
+    border-radius: var(--borda-padrao);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--cor-sustentavel);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--borda-padrao);
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    background-color: var(--cor-sustentavel);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: var(--borda-padrao);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--cor-sustentavel-hover);
+}
+
+#btnAcessibilidade {
+    width: auto;
+    background-color: transparent;
+    color: var(--cor-sustentavel);
+    border: 1px solid var(--cor-sustentavel);
+    padding: 6px 12px;
+    margin-top: 10px;
+}
+
+#btnAcessibilidade:hover {
+    background-color: var(--cor-sustentavel);
+    color: white;
+}
+
+.mensagem {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Responsividade obrigatória para dispositivos móveis */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+}
 
